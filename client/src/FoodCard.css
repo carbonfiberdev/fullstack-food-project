@@ -1,0 +1,42 @@
+.food-card {
+  height: 420px;
+  width: 320px;
+  background-color: rgb(184, 184, 184);
+  border-radius: 10px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.head-bg {
+  height: 0;
+  width: 100%;
+  background-color: rgb(172, 172, 172);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pp {
+  margin-top: 50px;
+  height: 85px;
+  width: 85px;
+  position: absolute;
+  background-color: rgb(211, 211, 211);
+  border-radius: 100%;
+}
+
+.food-img {
+  object-fit: cover;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.food-card > h3 {
+  margin: 0;
+  padding: 0;
+  padding-left: 3px;
+}
