@@ -11,7 +11,7 @@ export default function RecipeEditor() {
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
       [{ font: [] }],
       [{ size: [] }],
-      [("bold", "italic", "underline", "strike", "blockquote")],
+      ["bold", "italic", "underline", "strike", "blockquote"],
       [
         { list: "ordered" },
         { list: "bullet" },
