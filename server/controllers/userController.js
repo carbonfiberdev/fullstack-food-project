@@ -1,4 +1,3 @@
-const { user } = require("../models/userModel");
 const {
   findUser,
   findAllUsers,
@@ -8,6 +7,7 @@ const {
   findAllFoods,
   dbAddPP,
   getUserDataForCards,
+  addRecipeFormData,
 } = require("./dbController");
 
 const findAllUsersController = async (req, res) => {
@@ -125,6 +125,12 @@ const getFoodData = async (req, res) => {
   const { user_id } = req.user_id;
 };
 
+const recipeForm = async (req, res) => {
+  const { food_name, form_data } = req.body;
+  let user_name = req.session.user_name;
+  await addRecipeFormData(user_name, food_name, form_data);
+};
+
 module.exports = {
   registerUserController,
   findAllUsersController,
@@ -137,4 +143,5 @@ module.exports = {
   generateFoodCart,
   addPP,
   getFoodData,
+  recipeForm,
 };

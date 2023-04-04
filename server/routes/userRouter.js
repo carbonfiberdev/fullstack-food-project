@@ -13,6 +13,7 @@ router.post("/login", userController.loginUser);
 router.post("/add_food", userController.addFoodd);
 router.post("/add_pp", userController.addPP);
 router.post("/get_food_data", userController.getFoodData);
+router.post("/recipe_form", userController.recipeForm);
 
 router.get("/find_foods", userController.findFoods);
 router.get("/generate_food_cart", userController.generateFoodCart);

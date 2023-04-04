@@ -128,6 +128,21 @@ const generateFoodData = async (user_id) => {
   return user;
 };
 
+const addRecipeFormData = async (user_name, food_name, form_data) => {
+  let _user = await user.updateOne(
+    { isim: user_name },
+    {
+      $push: {
+        yemekler: {
+          yemek_adi: food_name,
+          yemek_icerigi: form_data,
+        },
+      },
+    }
+  );
+  console.log(_user);
+};
+
 module.exports = {
   ConnectToDB,
   listDatabases,
@@ -144,4 +159,5 @@ module.exports = {
   get_pp_url,
   getUserDataForCards,
   generateFoodData,
+  addRecipeFormData,
 };

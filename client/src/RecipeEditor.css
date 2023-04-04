@@ -7,6 +7,7 @@
   background-color: rgba(187, 187, 187, 0.35);
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -14,4 +15,13 @@
   height: 80%;
   width: 90%;
   background-color: rgb(240, 240, 240);
+}
+
+.recipe-editor-button {
+  margin-top: 50px;
+}
+
+.food-title {
+  display: flex;
+  flex-direction: row;
 }
