@@ -21,7 +21,28 @@
   margin-top: 50px;
 }
 
-.food-title {
+.food-title-form {
+  width: 400px;
+  height: 280px;
+  background-color: rgba(228, 228, 228, 0.8);
+  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+}
+
+.food-title-form > input {
+  width: 70%;
+  height: 50px;
+  border: none;
+  border-radius: 0;
+}
+.food-title-form > button {
+  margin-top: 15px;
+  width: 70%;
+  height: 50px;
+  border: none;
 }

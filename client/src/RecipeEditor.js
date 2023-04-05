@@ -36,13 +36,15 @@ export default function RecipeEditor() {
   };
   const FoodTitleAndUrl = () => {
     return (
-      <div className="food-title">
+      <div className="food-title-form">
         <input
           type="text"
+          placeholder="Yemeğinizin ismi"
           onChange={(e) => (food_input_name.current = e.target.value)}
         />
         <input
           type="text"
+          placeholder="Yemeğinizin resminin url'si"
           onChange={(e) => (food_input_url.current = e.target.value)}
         />
         <button onClick={() => setEditStage(true)}>Send</button>
