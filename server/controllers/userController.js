@@ -126,9 +126,9 @@ const getFoodData = async (req, res) => {
 };
 
 const recipeForm = async (req, res) => {
-  const { food_name, form_data } = req.body;
+  const { food_name, food_url, form_data } = req.body;
   let user_name = req.session.user_name;
-  await addRecipeFormData(user_name, food_name, form_data);
+  await addRecipeFormData(user_name, food_name, food_url, form_data);
 };
 
 module.exports = {

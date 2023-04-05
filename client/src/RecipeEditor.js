@@ -10,12 +10,14 @@ export default function RecipeEditor() {
     axios
       .post("http://localhost:4000/user/recipe_form", {
         food_name: food_input_name.current,
+        food_url: food_input_url.current,
         form_data: value,
       })
       .then((response) => {});
   };
   const [editStage, setEditStage] = useState(false);
   const food_input_name = useRef();
+  const food_input_url = useRef();
   const [value, setValue] = useState("");
   const modules = {
     toolbar: [
@@ -32,12 +34,16 @@ export default function RecipeEditor() {
       ["link", "image", "video"],
     ],
   };
-  const FoodTitle = () => {
+  const FoodTitleAndUrl = () => {
     return (
       <div className="food-title">
         <input
           type="text"
           onChange={(e) => (food_input_name.current = e.target.value)}
+        />
+        <input
+          type="text"
+          onChange={(e) => (food_input_url.current = e.target.value)}
         />
         <button onClick={() => setEditStage(true)}>Send</button>
       </div>
@@ -64,7 +70,7 @@ export default function RecipeEditor() {
           </button>
         </>
       ) : (
-        <FoodTitle />
+        <FoodTitleAndUrl />
       )}
     </div>
   );

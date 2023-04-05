@@ -128,7 +128,7 @@ const generateFoodData = async (user_id) => {
   return user;
 };
 
-const addRecipeFormData = async (user_name, food_name, form_data) => {
+const addRecipeFormData = async (user_name, food_name, food_url, form_data) => {
   let _user = await user.updateOne(
     { isim: user_name },
     {
@@ -136,6 +136,7 @@ const addRecipeFormData = async (user_name, food_name, form_data) => {
         yemekler: {
           yemek_adi: food_name,
           yemek_icerigi: form_data,
+          yemek_url: food_url,
         },
       },
     }

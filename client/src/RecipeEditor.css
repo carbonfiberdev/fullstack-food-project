@@ -23,5 +23,5 @@
 
 .food-title {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
